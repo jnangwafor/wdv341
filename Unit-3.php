@@ -50,11 +50,12 @@ $dateNow = "2018-10-25"; //global variable
 		echo $number_format;
 	}
 	//format currency to USA
-	//function currencyFormat($inputID)
-	//{
-	//	setlocale(LC_MONETARY,'en-US');
-		//return money_format('%i', $inputID);
-	//}
+	function currencyFormat($inputID)
+	{
+		
+		setlocale(LC_MONETARY,"en_US");
+		return money_format('%i', $inputID) ."\n";
+	}
 
 ?>
 
@@ -85,12 +86,19 @@ $dateNow = "2018-10-25"; //global variable
 
 <body>
 	<div id="container">
+		<p>
+			<ul>
+				<li><a href = "homework.htm"> Homework Page </a> </li>
+			</ul>
+			
 	<h2>See my date formatted as mm/dd/yyyy: <?php echo formatDate() ?></h2>
 	<h3>See another date formatted as mm/dd/yyyy: <em><?php echo internationalDate($dateNow) ?></em></h3>
 	
 	<P id="format">The string in the function contain: <em><strong><?php echo formatString('My school is DMAcc') ?></strong></em></P>
 	
 	<h4>Formatted numbers: <?php echo formatNumbers(1234567890)  ?></h4>
+	
+	<h4>Formatted numbers into currency: <?php echo currencyFormat(123456)  ?></h4>
 		
 		
 	</div>
