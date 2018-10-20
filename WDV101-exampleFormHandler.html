@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV101 Intro HTML and CSS Form Processing</title>
+
+	
+	<style>
+		
+		.hide{
+			display: none;
+		}
+	
+	</style>
+</head>
+
+<body>
+	<h3>
+		<p>
+			<ul>
+				<li><a href = "homework.htm"> Homework Page </a> </li>
+			</ul>
+		</p>
+			
+	</h3>
+<h1>WDV101 Intro HTML and CSS</h1>
+<h2>Chapter 9 - Processing Form Data using PHP</h2>
+<hr />
+<p>This page will send the form data to a PHP page on the server called formHandler.php. The PHP page will display the 'name = value' pairs for all the elements from this form. This summary will work with almost any form. </p>
+<p>Use a &quot;<strong>formHanlder.php&quot; </strong>value  in the action attribute of your form. Use a &quot;post&quot; value for the method attribute. </p>
+<p><strong>name</strong> - The value of the name attribute from the HTML form element.</p>
+<p><strong>value</strong> - The value entered in a text field. This will vary depending upon the different types of HTML form element.</p>
+<form id="form1" name="form1" method="post" action="formHandler.php">
+  <p>First Name: 
+    <input type="text" name="firstName" id="textfield" />
+</p>
+  <p>Last Name: 
+    <input type="text" name="lastName" id="textfield2" />
+  </p>
+  <p>School: 
+    <input type="text" name="School" id="textfield3" />
+  </p>
+	<h4>Please choose your semester</h4>
+	<p>First Semester: 
+		<input type="radio" name="Fall" id="fall" />
+		Second Semester:<input type="radio" name="Spring" id="spring" />
+		Third Semester:<input type="radio" name="Summer" id="summer" />
+  </p>
+		<p><strong>Status: </strong>
+		<input type="checkbox" name="PartTime" id="partTime" />Part Time
+		<input type="checkbox" name="FullTime" id="fullTime" />Full Time	
+  </p>
+	<p class="hide">Name:
+		<input type="text" name="robot" id="robot"  autocomplete="off">
+	</p>
+	<p>
+		<strong>Major:</strong>
+		<select name="Major" id="major">
+			<option value="Business Information System">Business Information System</option>
+			<option value="Management Information System">Management Information System</option>
+			<option value="Business Administration">Business Administration</option>
+			<option value="Marketing">Marketing</option>
+			<option value="Liberal Arts">Liberal Arts</option>
+			<option value="Accounting">Accounting</option>
+			
+		</select>
+	</p>
+	
+  <p>
+    <input type="submit" name="button" id="button" value="Submit" />
+    <input type="reset" name="button2" id="button2" value="Reset" />
+  </p>
+</form>
+
+<p>&nbsp;</p>
+</body>
+
+</html>
